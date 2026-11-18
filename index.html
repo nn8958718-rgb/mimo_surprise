@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0f5">
+  <title>A little surprise for you</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <div class="sparkles" aria-hidden="true">✦　♡　✧　♡　✦</div>
+    <p class="eyebrow">A little moment, made with love</p>
+    <h1 id="heading">Make a wish, my love</h1>
+    <p class="intro" id="intro">Tap the candles to blow them out ✨</p>
+
+    <section class="scene" id="cakeScene" aria-label="Birthday cake">
+      <div class="balloon balloon-one">♡</div>
+      <div class="balloon balloon-two">♡</div>
+      <button class="cake-button" id="blowButton" aria-label="Blow out the candles">
+        <span class="flame flame-one" id="flameOne"></span>
+        <span class="flame flame-two" id="flameTwo"></span>
+        <span class="candle candle-one"></span>
+        <span class="candle candle-two"></span>
+        <span class="icing"></span>
+        <span class="cake-top"></span>
+        <span class="cake-body"></span>
+        <span class="cake-plate"></span>
+      </button>
+      <p class="tiny-hint">♡ tap the cake ♡</p>
+    </section>
+
+    <section class="reveal hidden" id="flowerScene">
+      <div class="bouquet" aria-hidden="true">🌷 🌸 🌷</div>
+      <h2>You make my world bloom</h2>
+      <p>And now, there's one more thing I want you to read…</p>
+      <button class="primary" id="letterButton">Open my letter 💌</button>
+    </section>
+
+    <section class="letter hidden" id="letterScene">
+      <div class="envelope">💌</div>
+      <h2>To my favourite person</h2>
+      <div class="letter-paper">
+        <p id="letterText">Put your personal letter here before publishing. You can replace this text in index.html with the message you want him to read.</p>
+        <p class="signature">With all my love ♡</p>
+      </div>
+      <button class="secondary" id="replayButton">Replay the surprise ↻</button>
+    </section>
+
+    <footer>Made with love ♡</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

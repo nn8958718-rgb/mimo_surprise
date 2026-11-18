@@ -1,0 +1,48 @@
+* { box-sizing: border-box; }
+:root { --pink:#f6b8cc; --deep:#8e536d; --cream:#fffaf8; --rose:#fce3eb; }
+body {
+  margin:0; min-height:100vh; display:grid; place-items:center; padding:22px;
+  background:radial-gradient(circle at top,#fff 0,#fff0f5 48%,#f9dce7 100%);
+  color:var(--deep); font-family:Georgia, "Times New Roman", serif;
+}
+.card {
+  width:min(100%,560px); min-height:650px; padding:28px 22px 18px; text-align:center;
+  background:rgba(255,250,248,.92); border:1px solid #f3cbd8; border-radius:30px;
+  box-shadow:0 18px 55px rgba(151,83,111,.13); position:relative; overflow:hidden;
+}
+.card:before,.card:after { content:""; position:absolute; width:110px;height:110px;border:1px solid #f1c2d1;border-radius:50%;opacity:.55; }
+.card:before{top:-65px;left:-45px}.card:after{bottom:-70px;right:-45px}
+.sparkles { color:#d98ba8; letter-spacing:5px; font-size:20px; }
+.eyebrow { text-transform:uppercase; letter-spacing:3px; font:11px Arial,sans-serif; color:#bd8298; margin:20px 0 9px; }
+h1 { font-size:clamp(29px,7vw,42px); font-weight:normal; margin:0 0 10px; }
+.intro { font:14px Arial,sans-serif; color:#a9788c; }
+.scene { position:relative; height:310px; display:grid; place-items:center; }
+.cake-button { border:0;background:none;position:relative;width:260px;height:230px;cursor:pointer; }
+.cake-button:focus-visible,button:focus-visible{outline:3px solid #c77f9c;outline-offset:5px}
+.cake-plate { position:absolute;bottom:24px;left:18px;width:224px;height:17px;background:#e8c5d0;border-radius:50%;box-shadow:0 5px 0 #d8aeba; }
+.cake-body { position:absolute;bottom:42px;left:43px;width:174px;height:100px;background:linear-gradient(90deg,#f4b9c9,#ffe0e8 48%,#f1aabd);border-radius:12px 12px 18px 18px;box-shadow:inset 0 -12px rgba(211,125,153,.15); }
+.cake-top {position:absolute;bottom:130px;left:43px;width:174px;height:40px;background:#fff0f3;border-radius:50%;border:3px solid #f4c4d2;z-index:2}
+.icing {position:absolute;bottom:119px;left:43px;width:174px;height:28px;background:#fff0f3;border-radius:0 0 18px 18px;z-index:3;clip-path:polygon(0 0,100% 0,100% 55%,90% 100%,80% 55%,68% 100%,56% 55%,44% 100%,30% 55%,18% 100%,8% 55%,0 100%)}
+.candle {position:absolute;bottom:158px;width:10px;height:47px;border-radius:4px;background:repeating-linear-gradient(135deg,#fff 0 5px,#e99ab5 5px 10px);z-index:4}
+.candle-one{left:105px}.candle-two{left:147px}
+.flame {position:absolute;bottom:202px;width:17px;height:25px;background:radial-gradient(ellipse at 50% 65%,#fff7bb 0 20%,#ffc65e 45%,#f18b54 75%);border-radius:60% 40% 60% 40%;transform:rotate(45deg);z-index:5;filter:drop-shadow(0 0 8px #ffc56c);animation:flicker .7s infinite alternate}
+.flame-one{left:102px}.flame-two{left:144px}
+@keyframes flicker{to{transform:rotate(35deg) scale(.9)}}
+.balloon{position:absolute;font-size:48px;color:#e9a5bd;animation:float 3s ease-in-out infinite}
+.balloon-one{left:12%;top:35px}.balloon-two{right:12%;top:65px;animation-delay:1s}
+@keyframes float{50%{transform:translateY(-12px)}}
+.tiny-hint{position:absolute;bottom:0;width:100%;font:12px Arial,sans-serif;color:#bd8298}
+button.primary,button.secondary {border:0;border-radius:999px;padding:14px 23px;font:14px Arial,sans-serif;cursor:pointer;margin:12px 5px}
+.primary{background:#d98eaa;color:white;box-shadow:0 6px 15px #eac5d2}
+.secondary{background:#f8e3eb;color:#965d76}
+.hidden{display:none!important}
+.reveal,.letter{animation:appear .8s ease both;padding:12px 5px 20px}
+@keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.bouquet{font-size:62px;margin:8px}
+h2{font-size:25px;font-weight:normal}
+.reveal p{font:14px/1.6 Arial,sans-serif}
+.envelope{font-size:55px;margin:8px}
+.letter-paper{background:#fffdfc;border:1px solid #f1d5df;border-radius:18px;padding:22px;text-align:left;line-height:1.8;color:#80546a;white-space:pre-wrap}
+.signature{text-align:right;font-style:italic}
+footer{font:11px Arial,sans-serif;color:#c28da1;margin-top:22px}
+@media(max-width:420px){.card{padding:22px 15px;min-height:620px}.scene{height:285px}.cake-button{transform:scale(.88)}}
